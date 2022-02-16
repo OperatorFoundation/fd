@@ -1,8 +1,9 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
   name: "fd",
+  platform: [.macOS(.v10_15)],
   products: [
     .library(name: "fd", targets: ["fd"])
   ],
