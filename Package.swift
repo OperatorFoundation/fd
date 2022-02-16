@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
   name: "fd",
-  platform: [.macOS(.v10_15)],
+  platforms: [.macOS(.v10_15)],
   products: [
     .library(name: "fd", targets: ["fd"])
   ],
@@ -13,5 +13,6 @@ let package = Package(
   targets: [
     .target(name: "fd", dependencies: [], path: "Sources"),
     .testTarget(name: "fdTests", dependencies: ["fd", "Spectre"], path: "Tests/fdTests")
-  ]
+  ],
+  swiftLanguageVersions: [.v5]
 )
